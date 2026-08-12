@@ -14,7 +14,7 @@ local function has_ubuntu_wsl()
 	end
 
 	stdout = stdout:gsub("\0", "")
-	
+
 	return stdout:lower():find("ubuntu", 1, true) ~= nil
 end
 
@@ -56,7 +56,6 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Right",
-			size = { Percent = 50 },
 		}),
 	},
 	{
@@ -64,7 +63,7 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Down",
-			size = { Cells = 20 },
+			size = { Percent = 25 },
 		}),
 	},
 }
