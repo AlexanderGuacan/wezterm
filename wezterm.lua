@@ -2,8 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
--- Enable for WSL
--- config.default_prog = { "wsl", "-d", "Ubuntu", "--cd", "~" }
+-- config.default_domain = "WSL:Ubuntu"
 config.initial_cols = 120
 config.initial_rows = 30
 config.window_decorations = "RESIZE"
@@ -14,14 +13,16 @@ config.color_scheme = "GruvboxDarkHard"
 
 config.font = wezterm.font_with_fallback({
 	"JetBrainsMono Nerd Font Mono",
+	"JetBrainsMono Nerd Font",
 	"JetBrainsMonoNL Nerd Font Mono",
+	"JetBrainsMonoNL Nerd Font",
 })
 
 config.window_padding = {
-	left = 2,
-	right = 0,
+	left = 4,
+	right = 2,
 	top = 4,
-	bottom = 0,
+	bottom = 2,
 }
 
 config.keys = {
